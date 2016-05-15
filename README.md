@@ -1,3 +1,4 @@
 # Projects
 
-Pull request test
+Repository created by Bryan Brown.
+Various projects written in varying languages
