@@ -6,7 +6,11 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Lvl_3 extends Game.main{
+public class Lvl_3 extends Game.colors{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	public int answer;
 	public JButton red, blue, green, yellow;
 	
