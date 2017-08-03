@@ -1,4 +1,4 @@
-package Levels;
+package Game;
 
 import java.util.*;
 import javax.swing.*;
@@ -13,6 +13,7 @@ public class Lvl_3 extends Game.colors{
 	private static final long serialVersionUID = 1L;
 	public int answer;
 	public JButton red, blue, green, yellow;
+	private static boolean correct;
 	
 	public Lvl_3(){
 		Random rand = new Random();
@@ -89,10 +90,17 @@ public class Lvl_3 extends Game.colors{
 		}
 	}
 	public void correctGuess(){
-		JOptionPane.showMessageDialog(null, "Correct!");
+		JOptionPane.showMessageDialog(null, "Correct! Moving on to Lvl. 4");
+		correct = true;
+		initializeNextLevel();
 	}
 	public void incorrectGuess(){
 		JOptionPane.showMessageDialog(null, "Incorrect! Try again...");
+	}
+	public static void initializeNextLevel(){
+		if(correct){
+			Lvl_4.main(null);
+		}
 	}
 	public static void main(String[] args) {
 		JFrame window = new JFrame();
