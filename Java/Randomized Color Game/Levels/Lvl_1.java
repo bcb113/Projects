@@ -6,7 +6,11 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Lvl_1 extends Game.main{
+public class Lvl_1 extends Game.colors{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	public int answer;
 	public JButton red;
 	public JButton blue;
@@ -66,10 +70,7 @@ public class Lvl_1 extends Game.main{
 	}
 	public static void initializeNextLevel(){
 		if(correct){
-			Lvl_2 window2 = new Lvl_2();
-			Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-			window2.setLocation(dim.width/2 - window2.getSize().width/2, dim.height/2 - window2.getSize().height/2);
-			window2.main(null);
+			Lvl_2.main(null);
 		}
 	}
 	public static void main(String[] args) {
@@ -84,3 +85,4 @@ public class Lvl_1 extends Game.main{
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 }
+
