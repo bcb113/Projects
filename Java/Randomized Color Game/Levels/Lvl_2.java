@@ -6,7 +6,11 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Lvl_2 extends Game.main{
+public class Lvl_2 extends Game.colors{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	public int answer;
 	public JButton red, blue, green;
 	private static boolean correct;
@@ -70,7 +74,7 @@ public class Lvl_2 extends Game.main{
 		}
 	}
 	public void correctGuess(){
-		JOptionPane.showMessageDialog(null, "Correct!");
+		JOptionPane.showMessageDialog(null, "Correct! Moving on to Lvl. 3");
 		correct = true;
 		initializeNextLevel();
 	}
@@ -80,10 +84,7 @@ public class Lvl_2 extends Game.main{
 	}
 	public static void initializeNextLevel(){
 		if(correct){
-			Lvl_3 window2 = new Lvl_3();
-			Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-			window2.setLocation(dim.width/2 - window2.getSize().width/2, dim.height/2 - window2.getSize().height/2);
-			window2.main(null);
+			Lvl_3.main(null);
 		}
 	}
 	public static void main(String[] args) {
